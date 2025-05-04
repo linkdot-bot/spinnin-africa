@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinnin' Records Africa - Submit Your Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #000000 0%, #111111 50%, #222222 100%);
+        }
+        
+        .logo-text {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 900;
+            letter-spacing: -1px;
+            background: linear-gradient(90deg, #ffffff 0%, #cccccc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .demo-box {
+            backdrop-filter: blur(10px);
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        input, textarea, select {
+            background-color: rgba(20, 20, 20, 0.7) !important;
+            border-color: rgba(255, 255, 255, 0.1) !important;
+            color: white !important;
+        }
+        
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #ffffff !important;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+        }
+        
+        ::placeholder {
+            color: #666666 !important;
+        }
+        
+        .video-overlay {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7) 100%);
+        }
+        
+        /* Loading spinner */
+        .spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="gradient-bg py-4 px-6 flex justify-between items-center sticky top-0 z-50 border-b border-gray-900">
+        <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center border border-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                    <path d="M12 2v20M6 6l10 10M6 16l10-10" />
+                </svg>
+            </div>
+            <h1 class="logo-text text-2xl">SPINNIN' <span class="text-white">AFRICA</span></h1>
+        </div>
+        <div class="hidden md:flex space-x-6">
+            <a href="#about" class="text-white hover:text-gray-300 transition">About</a>
+            <a href="#submit" class="text-white hover:text-gray-300 transition">Submit Demo</a>
+            <a href="#faq" class="text-white hover:text-gray-300 transition">FAQ</a>
+        </div>
+        <button class="md:hidden text-white">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- BACKGROUND IMAGE (replace the URL with your own) -->
+    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+alt="Concert background"
+class="absolute w-full h-full object-cover -z-10">
+
+    <!-- DARK OVERLAY (adjust opacity by changing the 50 value) -->
+        <div class="absolute inset-0 bg-black/50 -z-10"></div>
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">YOUR MUSIC DESERVES TO BE HEARD</h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8">Submit your demo to Spinnin' Records Africa for just $1 and get discovered by one of the world's leading dance music labels.</p>
+            <a href="#submit" class="bg-white hover:bg-gray-200 text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 pulse-animation">
+                SUBMIT NOW <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">ABOUT SPINNIN' RECORDS AFRICA</h2>
+                <div class="w-24 h-1 bg-white mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Discovering Africa's Next Music Stars</h3>
+                    <p class="text-gray-400 mb-6">As a subsidiary of the legendary Spinnin' Records, we're dedicated to uncovering and developing the most exciting musical talents across the African continent.</p>
+                    <p class="text-gray-400 mb-6">Our team of A&R experts listens to every submission, and for just $1, you can get your music in front of the people who can take your career to the next level.</p>
+                    <div class="flex space-x-4">
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                            <i class="fas fa-music text-white text-2xl mb-2"></i>
+                            <p class="font-bold">Electronic</p>
+                            <p class="text-sm text-gray-400">House, Techno, Afrobeat</p>
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                            <i class="fas fa-compact-disc text-white text-2xl mb-2"></i>
+                            <p class="font-bold">Dance</p>
+                            <p class="text-sm text-gray-400">EDM, Amapiano, Dancehall</p>
+                        </div>
+                        <div class="bg-gray-900 p-4 rounded-lg border border-gray-800">
+                            <i class="fas fa-headphones text-white text-2xl mb-2"></i>
+                            <p class="font-bold">Pop</p>
+                            <p class="text-sm text-gray-400">Afropop, R&B, Pop Fusion</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="demo-box rounded-xl p-8 shadow-xl border border-gray-800">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full bg-gray-900 flex items-center justify-center mr-4 border border-gray-800">
+                                <i class="fas fa-check text-2xl text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl">Why Submit With Us?</h4>
+                                <p class="text-gray-400">Direct access to Spinnin' Records global network</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-white mt-1 mr-3"></i>
+                                <span>Guaranteed review by our A&R team</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-white mt-1 mr-3"></i>
+                                <span>Potential for worldwide distribution</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-white mt-1 mr-3"></i>
+                                <span>Professional feedback on selected submissions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-white mt-1 mr-3"></i>
+                                <span>Opportunity for artist development</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="gradient-bg py-16 border-t border-b border-gray-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">10K+</div>
+                    <div class="text-gray-400">Demos Received</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">150+</div>
+                    <div class="text-gray-400">Artists Signed</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">50M+</div>
+                    <div class="text-gray-400">Total Streams</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">15</div>
+                    <div class="text-gray-400">Countries Reached</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Submission Form -->
+    <section id="submit" class="py-20 px-6">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">SUBMIT YOUR DEMO</h2>
+                <p class="text-gray-400">Only $1 submission fee. All genres welcome.</p>
+                <div class="w-24 h-1 bg-white mx-auto mt-4"></div>
+            </div>
+            
+            <div class="demo-box rounded-xl p-8 shadow-xl border border-gray-800">
+                <form id="demoForm">
+                    <!-- FormSubmit Configuration -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_subject" value="New Demo Submission - Spinnin' Africa">
+                    <input type="text" name="_honey" style="display:none">
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="artistName" class="block mb-2 font-medium">Artist Name *</label>
+                            <input type="text" id="artistName" name="artistName" required class="w-full px-4 py-3 rounded-lg border border-gray-800">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2 font-medium">Email *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-800">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="country" class="block mb-2 font-medium">Country *</label>
+                            <select id="country" name="country" required class="w-full px-4 py-3 rounded-lg border border-gray-800">
+                                <option value="">Select your country</option>
+                                <option value="Nigeria">Nigeria</option>
+                                <option value="South Africa">South Africa</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="Ghana">Ghana</option>
+                                <option value="Other">Other African Country</option>
+                                <option value="Non-African">Non-African</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="genre" class="block mb-2 font-medium">Primary Genre *</label>
+                            <select id="genre" name="genre" required class="w-full px-4 py-3 rounded-lg border border-gray-800">
+                                <option value="">Select genre</option>
+                                <option value="Afrobeat">Afrobeat</option>
+                                <option value="Amapiano">Amapiano</option>
+                                <option value="House">House</option>
+                                <option value="Techno">Techno</option>
+                                <option value="EDM">EDM</option>
+                                <option value="Afropop">Afropop</option>
+                                <option value="Dancehall">Dancehall</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="socialLinks" class="block mb-2 font-medium">Social Media Links (Optional)</label>
+                        <input type="text" id="socialLinks" name="socialLinks" placeholder="Instagram, TikTok, YouTube, etc." class="w-full px-4 py-3 rounded-lg border border-gray-800">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="demoLink" class="block mb-2 font-medium">Demo Link *</label>
+                        <input type="url" id="demoLink" name="demoLink" required placeholder="SoundCloud, YouTube, Dropbox, etc." class="w-full px-4 py-3 rounded-lg border border-gray-800">
+                        <p class="text-sm text-gray-500 mt-2">Please ensure your demo is downloadable or streamable</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="message" class="block mb-2 font-medium">Tell Us About Your Music (Optional)</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-800"></textarea>
+                    </div>
+                    
+                    <div class="flex items-center mb-6">
+                        <input type="checkbox" id="terms" name="terms" required class="w-5 h-5 rounded border border-gray-800 bg-gray-900">
+                        <label for="terms" class="ml-2 text-sm">I agree to the <a href="#" class="text-white hover:underline">Terms & Conditions</a> and confirm this is my original work</label>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="button" id="submitBtn" class="bg-white hover:bg-gray-200 text-black font-bold py-4 px-12 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+                            <span id="btnText">PAY $1 & SUBMIT</span>
+                            <span id="btnSpinner" class="spinner hidden"></span>
+                            <i id="btnIcon" class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                        <p class="text-sm text-gray-500 mt-4">You'll be redirected to a secure payment page</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="py-20 px-6 bg-black border-t border-b border-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">SUCCESS STORIES</h2>
+                <div class="w-24 h-1 bg-white mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="demo-box rounded-xl p-6 hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800">
+                    <div class="w-20 h-20 rounded-full bg-gray-900 flex items-center justify-center mb-4 mx-auto border border-gray-800">
+                        <i class="fas fa-quote-left text-2xl text-white"></i>
+                    </div>
+                    <p class="text-gray-400 italic mb-4">"Submitting through Spinnin' Africa changed my life. Within weeks of being signed, my track was played at major festivals across Europe."</p>
+                    <div class="font-bold">DJ Kweku</div>
+                    <div class="text-sm text-gray-400">Ghana • Afro House</div>
+                </div>
+                
+                <div class="demo-box rounded-xl p-6 hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800">
+                    <div class="w-20 h-20 rounded-full bg-gray-900 flex items-center justify-center mb-4 mx-auto border border-gray-800">
+                        <i class="fas fa-quote-left text-2xl text-white"></i>
+                    </div>
+                    <p class="text-gray-400 italic mb-4">"The $1 submission fee was the best investment I ever made. The feedback alone was worth it, but getting signed was beyond my dreams."</p>
+                    <div class="font-bold">Amara</div>
+                    <div class="text-sm text-gray-400">Nigeria • Afropop</div>
+                </div>
+                
+                <div class="demo-box rounded-xl p-6 hover:transform hover:-translate-y-2 transition duration-300 border border-gray-800">
+                    <div class="w-20 h-20 rounded-full bg-gray-900 flex items-center justify-center mb-4 mx-auto border border-gray-800">
+                        <i class="fas fa-quote-left text-2xl text-white"></i>
+                    </div>
+                    <p class="text-gray-400 italic mb-4">"As an underground producer from Kenya, I never thought I'd get this opportunity. Now my music is reaching global audiences."</p>
+                    <div class="font-bold">Savage Beats</div>
+                    <div class="text-sm text-gray-400">Kenya • Amapiano</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-6">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">FREQUENTLY ASKED QUESTIONS</h2>
+                <div class="w-24 h-1 bg-white mx-auto"></div>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="demo-box rounded-xl p-6 border border-gray-800">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left">
+                        <span class="font-bold">Why is there a $1 submission fee?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden text-gray-400">
+                        <p>The nominal $1 fee helps us maintain the quality of submissions and ensures that only serious artists submit their work. It also helps cover the administrative costs of processing and reviewing every demo we receive.</p>
+                    </div>
+                </div>
+                
+                <div class="demo-box rounded-xl p-6 border border-gray-800">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left">
+                        <span class="font-bold">How long does it take to hear back?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden text-gray-400">
+                        <p>We aim to review all submissions within 4-6 weeks. If we're interested in your work, we'll contact you directly via the email you provided. Due to the volume of submissions, we're unable to provide individual feedback to everyone.</p>
+                    </div>
+                </div>
+                
+                <div class="demo-box rounded-xl p-6 border border-gray-800">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left">
+                        <span class="font-bold">What file format should my demo be in?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden text-gray-400">
+                        <p>We accept all common audio formats (MP3, WAV, AIFF). For best quality, we recommend submitting high-quality MP3 (320kbps) or WAV files. Please ensure your demo is downloadable or streamable from the link you provide.</p>
+                    </div>
+                </div>
+                
+                <div class="demo-box rounded-xl p-6 border border-gray-800">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left">
+                        <span class="font-bold">Can I submit multiple tracks?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden text-gray-400">
+                        <p>Yes, you can submit multiple tracks as part of one submission. However, we recommend focusing on your 2-3 strongest tracks rather than sending a large collection. Quality over quantity is key.</p>
+                    </div>
+                </div>
+                
+                <div class="demo-box rounded-xl p-6 border border-gray-800">
+                    <button class="faq-toggle w-full flex justify-between items-center text-left">
+                        <span class="font-bold">What happens if my demo is selected?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content mt-4 hidden text-gray-400">
+                        <p>If we're interested in your work, our A&R team will contact you to discuss next steps. This may include signing a contract, receiving professional feedback, working with our producers, or releasing your music through our global distribution network.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg py-20 px-6 border-t border-b border-gray-900">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">READY TO TAKE YOUR MUSIC TO THE WORLD?</h2>
+            <p class="text-xl text-gray-300 mb-8">Submit your demo today for just $1 and join the Spinnin' Records Africa family.</p>
+            <a href="#submit" class="bg-white hover:bg-gray-200 text-black font-bold py-4 px-12 rounded-full text-lg transition-all duration-300 transform hover:scale-105 inline-block">
+                SUBMIT NOW <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 px-6 border-t border-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center border border-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                                <path d="M12 2v20M6 6l10 10M6 16l10-10" />
+                            </svg>
+                        </div>
+                        <h3 class="logo-text text-xl">SPINNIN' <span class="text-white">AFRICA</span></h3>
+                    </div>
+                    <p class="text-gray-500 text-sm">Discovering and developing Africa's next generation of musical talent.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-500 hover:text-white transition">About Us</a></li>
+                        <li><a href="#submit" class="text-gray-500 hover:text-white transition">Submit Demo</a></li>
+                        <li><a href="#faq" class="text-gray-500 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-white transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-500">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-white"></i>
+                            <span>demos@spinninafrica.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-white"></i>
+                            <span>Lagos, Nigeria<br>Johannesburg, South Africa</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/spinninrecords?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="w-10 h-10 rounded-full bg-gray-900 hover:bg-white flex items-center justify-center transition border border-gray-800">
+                            <i class="fab fa-instagram text-white hover:text-black"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@spinninrecords?is_from_webapp=1&sender_device=pc" class="w-10 h-10 rounded-full bg-gray-900 hover:bg-white flex items-center justify-center transition border border-gray-800">
+                            <i class="fab fa-tiktok text-white hover:text-black"></i>
+                        </a>
+                        <a href="http://www.youtube.com/@spinninrecords" class="w-10 h-10 rounded-full bg-gray-900 hover:bg-white flex items-center justify-center transition border border-gray-800">
+                            <i class="fab fa-youtube text-white hover:text-black"></i>
+                        </a>
+                        <a href="https://open.spotify.com/user/spinninrecordsofficial" class="w-10 h-10 rounded-full bg-gray-900 hover:bg-white flex items-center justify-center transition border border-gray-800">
+                            <i class="fab fa-spotify text-white hover:text-black"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-900 text-center text-gray-600 text-sm">
+                <p>&copy; 2025 Spinnin' Records Africa. A subsidiary of Spinnin' Records. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center hidden">
+        <div class="bg-gray-900 rounded-xl p-8 max-w-md w-full mx-4 text-center border border-gray-800">
+            <div class="w-20 h-20 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-6 border border-gray-700">
+                <i class="fas fa-check text-3xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4">Submission Successful!</h3>
+            <p class="text-gray-400 mb-6">Thank you for submitting your demo to Spinnin' Records Africa. Your payment of $1 has been processed successfully.</p>
+            <p class="text-gray-400 mb-6">We'll review your submission and get back to you within 4-6 weeks if we're interested in your work.</p>
+            <button id="closeSuccessModal" class="bg-white hover:bg-gray-200 text-black font-bold py-3 px-8 rounded-lg transition">
+                CLOSE
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // FAQ Toggle (keep this the same)
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Form and Payment Handling - UPDATED VERSION
+        const submitBtn = document.getElementById('submitBtn');
+        const demoForm = document.getElementById('demoForm');
+        const successModal = document.getElementById('successModal');
+        const closeSuccessModal = document.getElementById('closeSuccessModal');
+        const btnText = document.getElementById('btnText');
+        const btnIcon = document.getElementById('btnIcon');
+        const btnSpinner = document.getElementById('btnSpinner');
+        
+        submitBtn.addEventListener('click', async function(e) {
+            e.preventDefault();
+            
+            // Form validation
+            let isValid = true;
+            const requiredFields = demoForm.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.classList.add('border', 'border-red-500');
+                } else {
+                    field.classList.remove('border', 'border-red-500');
+                }
+            });
+            
+            if (!isValid) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            if (!document.getElementById('terms').checked) {
+                alert('You must agree to the Terms & Conditions.');
+                return;
+            }
+            
+            // Show loading state
+            btnText.textContent = 'Processing...';
+            btnIcon.classList.add('hidden');
+            btnSpinner.classList.remove('hidden');
+            submitBtn.disabled = true;
+            
+            try {
+                // 1. Submit form data to FormSubmit
+                const formData = new FormData(demoForm);
+                const formSubmitUrl = 'https://formsubmit.co/ajax/spinninrecordafrica@gmail.com';
+                
+                await fetch(formSubmitUrl, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+                
+                // 2. Get form data for Paystack
+                const email = document.getElementById('email').value;
+                const artistName = document.getElementById('artistName').value;
+                
+                // 3. Set up Paystack payment with callback URL
+                const currentUrl = window.location.href.split('?')[0]; // Get clean URL
+                const successUrl = encodeURIComponent(currentUrl + '?payment=success');
+                
+                // 4. Redirect to Paystack
+                const paystackUrl = `https://paystack.com/pay/01kfiuugsu?email=${encodeURIComponent(email)}&amount=100&callback_url=${successUrl}&metadata=${encodeURIComponent(JSON.stringify({
+                    artist_name: artistName,
+                    submission_type: 'demo'
+                }))}`;
+                
+                window.location.href = paystackUrl;
+                
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error processing your submission. Please try again.');
+                // Reset button state
+                btnText.textContent = 'PAY $1 & SUBMIT';
+                btnIcon.classList.remove('hidden');
+                btnSpinner.classList.add('hidden');
+                submitBtn.disabled = false;
+            }
+        });
+        
+        // Check for successful payment when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            // Check for either Paystack's trxref or our custom payment=success
+            if (urlParams.has('trxref') || urlParams.has('reference') || urlParams.get('payment') === 'success') {
+                // Show the success modal
+                successModal.classList.remove('hidden');
+                
+                // Clear the URL parameters to prevent showing on refresh
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        });
+        
+        // Modal close handlers
+        closeSuccessModal.addEventListener('click', () => {
+            successModal.classList.add('hidden');
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>
